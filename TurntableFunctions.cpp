@@ -28,11 +28,11 @@
 
 const long sanitySteps = SANITY_STEPS;              // Define an arbitrary number of steps to prevent indefinite spinning if homing/calibrations fails.
 const uint8_t limitSensorPin = 2;                   // Define pin 2 for the traverser mode limit sensor.
-const uint8_t homeSensorPin = 5;                    // Define pin 5 for the home sensor.
-const uint8_t relay1Pin = 3;                        // Control pin for relay 1.
-const uint8_t relay2Pin = 4;                        // Control pin for relay 2.
-const uint8_t ledPin = 6;                           // Pin for LED output.
-const uint8_t accPin = 7;                           // Pin for accessory output.
+const uint8_t homeSensorPin = 3;                    // Define pin 5 for the home sensor.
+const uint8_t relay1Pin = 8;                        // Control pin for relay 1.
+const uint8_t relay2Pin = 9;                        // Control pin for relay 2.
+const uint8_t ledPin = 255;                           // Pin for LED output.
+const uint8_t accPin = 255;                           // Pin for accessory output.
 const long homeSensitivity = HOME_SENSITIVITY;      // Define the minimum number of steps required before homing sensor deactivates.
 const int16_t totalMinutes = 21600;                 // Total minutes in one rotation (360 * 60)
 
@@ -84,7 +84,7 @@ void startupConfiguration() {
     Serial.print(F("|"));
     Serial.println(invertEnable);
   }
-  stepper.setEnablePin(A2);
+  stepper.setEnablePin(12);//changed to suit existing build
   stepper.setPinsInverted(invertDirection, invertStep, invertEnable);
 #endif
 #if HOME_SENSOR_ACTIVE_STATE == LOW
