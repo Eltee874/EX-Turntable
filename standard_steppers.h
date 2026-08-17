@@ -19,5 +19,6 @@
 #define ULN2003_FULL_CW AccelStepper(AccelStepper::FULL4WIRE, A3, A1, A2, A0)
 #define ULN2003_FULL_CCW AccelStepper(AccelStepper::FULL4WIRE, A0, A2, A1, A3)
 #define A4988 AccelStepper(AccelStepper::DRIVER, 7, 8)  //modified by lt to suit existing hardware build
+#define StepStick AccelStepper(AccelStepper::DRIVER, 5, 4, UNUSED_PIN, 6)  //modified by lt to suit existing hardware build
 //
 #endif

@@ -50,7 +50,7 @@
 #endif
 
 #ifndef SANITY_STEPS
-#define SANITY_STEPS 10000                          // Define sanity steps if not in config.h.
+#define SANITY_STEPS 100000                         // Define sanity steps if not in config.h.
 #endif
 
 #ifndef HOME_SENSITIVITY

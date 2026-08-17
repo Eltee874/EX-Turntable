@@ -354,6 +354,8 @@ void receiveEvent(int received) {
         Serial.print(F(" with phase switch: "));
         Serial.println(activity);
       }
+//steps=lastStep + steps;
+
       moveToPosition(steps, activity);
     } else if (activity == 2 && !stepper.isRunning() && (!calibrating || homed == 2)) {
       // Activity 2 needs to reset our homed flag to initiate the homing process, only if stepper not running.
